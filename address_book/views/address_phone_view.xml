@@ -1,0 +1,47 @@
+<odoo>
+
+     <record model="ir.ui.view" id="address_phone_form_view">
+        <field name="name">view.address.phone</field>
+        <field name="model">address.phone</field>
+        <field name="arch" type="xml">
+            <form string="Address Phone">
+                <sheet>
+                    <group>
+                    <group>
+                            <field name="type"/>
+                            <field name="number"/>
+                            <field name="email"/>
+                            <field name="address_id" invisible="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="address_phone_tree_view">
+        <field name="name">view.address.phone</field>
+        <field name="model">address.phone</field>
+        <field name="arch" type="xml">
+            <tree string="Address Phone">
+                <field name="sequence" widget="handle"/>
+                <field name="type"/>
+                <field name="number"/>
+                <field name="email"/>
+                <field name="address_id" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_address_phone">
+        <field name="name">Address Phone</field>
+        <field name="res_model">address.phone</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+     <menuitem id="menu_address_book" parent="" name="Address Book" sequence="10"
+          action=""/>
+    <menuitem id="menu_address_Phone_details" parent="menu_address_book" name="Address Phone"  sequence="10"
+          action="action_address_phone"/>
+
+</odoo>

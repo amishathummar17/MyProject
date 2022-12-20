@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+user_address_book_access,user.address_book.access,model_address_book,,1,1,1,1
+user_address_phone_access,user.address_phone.access,model_address_phone,,1,1,1,1
+

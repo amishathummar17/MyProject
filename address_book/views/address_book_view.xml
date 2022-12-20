@@ -1,0 +1,60 @@
+<odoo>
+    <record model="ir.ui.view" id="address_book_form_view">
+        <field name="name">view.address.book</field>
+        <field name="model">address.book</field>
+        <field name="arch" type="xml">
+            <form string="Address Book">
+                <sheet>
+                    <group>
+                    <group>
+                            <field name="name_id"/>
+                            <field name="address"/>
+                            <field name="city"/>
+                            <field name="state_id"/>
+                            <field name="zip"/>
+                            <field name="country_id"/>
+                        </group>
+                        <group>
+                            <field name="image" widget="image" class="oe_avatar"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                            <field name="type"/>
+                        </group>
+                    </group>
+                    <notebook>
+                    <page string="Address">
+                        <field name="address_ids"/>
+                    </page>
+                </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="address_book_tree_view">
+        <field name="name">view.address.book</field>
+        <field name="model">address.book</field>
+        <field name="arch" type="xml">
+            <tree string="Address Book">
+                <field name="name_id"/>
+                <field name="address"/>
+                <field name="city"/>
+                <field name="state_id"/>
+                <field name="zip"/>
+                <field name="country_id"/>
+            </tree>
+        </field>
+    </record>
+
+     <record model="ir.actions.act_window" id="action_address_book">
+        <field name="name">Address Book</field>
+        <field name="res_model">address.book</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_address_book" parent="" name="Address Book" sequence="10"
+          action=""/>
+    <menuitem id="menu_address_book_details" parent="menu_address_book" name="Address Book"  sequence="10"
+          action="action_address_book"/>
+
+</odoo>
