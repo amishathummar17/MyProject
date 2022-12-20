@@ -1,0 +1,24 @@
+<odoo>
+    <record id="view_purchase_form_sale_extend_inherit" model="ir.ui.view">
+        <field name="name">view.order.form.sale.extend.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='fiscal_position_id']" position="after">
+                <field name="maintain_partner_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_purchase_tree_sale_extend_inherit" model="ir.ui.view">
+        <field name="name">view.order.tree.sale.extend.inherit</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_kpis_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='activity_ids']" position="after">
+                <field name="maintain_partner_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
