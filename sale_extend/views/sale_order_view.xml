@@ -7,10 +7,6 @@
             <xpath expr="//group/group/field[@name='validity_date']" position="after">
                 <field name="customer_comment"/>
             </xpath>
-
-            <xpath expr="//field[@name='show_update_fpos']" position="after">
-                <field name="maintain_partner_id"/>
-            </xpath>
         </field>
     </record>
 
