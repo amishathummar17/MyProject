@@ -6,12 +6,6 @@
                          <h2 align="center"><b>Student Marksheet</b></h2>
                    <table class="table table-sm o_main_table mt-4">
                        <thead style="display: table-row-group">
-                    <tr>
-                        <th>Name</th>
-                        <th><t t-esc="o.name_id.name"/></th>
-                        <th>Standard</th>
-                        <th><t t-esc="o.std"/></th>
-                    </tr>
                         <tr>
                             <th>Phone</th>
                             <th><t t-esc="o.phone"/></th>
