@@ -8,6 +8,6 @@ class StdMark(models.Model):
     total = fields.Float(string="Total")
     percentage = fields.Float(string="Percentage")
     get_mark = fields.Float(string="Get Mark")
-
+    email = fields.Char(string="Email")
 
 
