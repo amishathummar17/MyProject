@@ -10,7 +10,6 @@ class AddressBook(models.Model):
     city = fields.Char(string="City")
     state_id = fields.Many2one("res.country.state", string='State')
     country_id = fields.Many2one('res.country', string='Country')
-    zip = fields.Char(string="Zip")
     address_ids = fields.One2many("address.phone", 'address_id', string="Address")
     phone = fields.Char(string="Phone")
     email = fields.Char(string="Email")
