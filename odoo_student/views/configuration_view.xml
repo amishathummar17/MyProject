@@ -1,0 +1,22 @@
+<odoo>
+    <record model="ir.ui.view" id="configuration_tree_view">
+        <field name="name">view.configuration</field>
+        <field name="model">configuration</field>
+        <field name="arch" type="xml">
+            <tree string="Configuration">
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_configuration">
+        <field name="name">Configuration</field>
+        <field name="res_model">configuration</field>
+        <field name="view_mode">tree,menu</field>
+    </record>
+
+     <menuitem id="menu_odoo_student" parent="" name="Student" sequence="10"
+          action=""/>
+     <menuitem id="menu_action_configuration_details" parent="menu_odoo_student" name="Configuration"  sequence="10"
+         action="action_configuration"/>
+
+</odoo>

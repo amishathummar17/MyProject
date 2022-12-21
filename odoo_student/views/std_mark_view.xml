@@ -1,0 +1,45 @@
+<odoo>
+    <record model="ir.ui.view" id="std_mark_form_view">
+        <field name="name">view.std.mark</field>
+        <field name="model">std.mark</field>
+        <field name="arch" type="xml">
+            <form string="Mark">
+                <sheet>
+                    <group>
+                    <group>
+                            <field name="sub"/>
+                            <field name="total"/>
+                            <field name="get_mark"/>
+                            <field name="std_id" invisible="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="std_mark_tree_view">
+        <field name="name">view.std.mark</field>
+        <field name="model">std.mark</field>
+        <field name="arch" type="xml">
+            <tree string="Mark">
+                <field name="sub"/>
+                <field name="total"/>
+                <field name="get_mark"/>
+                <field name="std_id" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_std_mark">
+        <field name="name">Mark</field>
+        <field name="res_model">std.mark</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+     <menuitem id="menu_odoo_student" parent="" name="Student" sequence="10"
+          action=""/>
+    <menuitem id="menu_std_mark_details" parent="menu_action_configuration_details" name="Mark"  sequence="10"
+          action="action_std_mark"/>
+
+</odoo>
