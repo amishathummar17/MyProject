@@ -12,7 +12,6 @@ class AddressBook(models.Model):
     country_id = fields.Many2one('res.country', string='Country')
     zip = fields.Char(string="Zip")
     address_ids = fields.One2many("address.phone", 'address_id', string="Address")
-    image = fields.Binary()
     phone = fields.Char(string="Phone")
     email = fields.Char(string="Email")
     type = fields.Selection([('mobile', 'Mobile'), ('work', 'Work'), ('home', 'Home'), ('other', 'Other')], string="Type", default='mobile')

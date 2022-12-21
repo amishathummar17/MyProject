@@ -15,7 +15,6 @@
                             <field name="country_id"/>
                         </group>
                         <group>
-                            <field name="image" widget="image" class="oe_avatar"/>
                             <field name="phone"/>
                             <field name="email"/>
                             <field name="type"/>
