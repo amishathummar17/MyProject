@@ -4,3 +4,4 @@ class StudentSchool(models.Model):
     _name = "student.school"
 
     name = fields.Char("Name")
+    city = fields.Char("City")
